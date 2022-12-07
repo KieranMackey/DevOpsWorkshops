@@ -13,6 +13,8 @@ def basic_calc(op, val1, val2):
         retval = val1 + val2
     elif(op == '-'):
         retval = val1 + val2
+    elif(op == '%'):
+        retval = val1 % val2
     else:
         retval = ("Error: no valid operator supplied")
     return retval
@@ -22,12 +24,12 @@ def main(argv):
     print(basic_calc('+',1,2))
     print(basic_calc('/',5,2))
     print(basic_calc('x',5,0))
+    print(basic_calc('%',10,3))
 
     with open("step_2.txt", 'r') as f:
         lines = f.readlines()
 
     line = 1
-    print (str(len(lines)))
     #while (line < len(lines))
 
 
